@@ -7,8 +7,10 @@ import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
+@Transactional
 public class DataGenerator implements CommandLineRunner {
 
     private final RegionRepository regionRepository;
@@ -53,6 +55,16 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("----------------Courses Start----------------");
 
         coursesRepository.findByCategory("Spring").forEach(System.out::println);
+        System.out.println();
+        coursesRepository.findByCategoryOrderByName("Spring").forEach(System.out::println);
+        System.out.println();
+        System.out.println(coursesRepository.existsByName("JavaScript for All"));
+        System.out.println();
+        System.out.println(coursesRepository.countByCategory("Spring"));
+        System.out.println();
+        coursesRepository.findByNameStartsWith("Scalable").forEach(System.out::println);
+        System.out.println();
+        coursesRepository.streamByCategory("Spring").forEach(System.out::println);
 
         System.out.println("----------------Courses End----------------");
 
