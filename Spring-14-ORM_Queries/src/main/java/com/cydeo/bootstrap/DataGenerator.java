@@ -1,6 +1,7 @@
 package com.cydeo.bootstrap;
 
 import com.cydeo.entity.Employee;
+import com.cydeo.repository.CoursesRepository;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
@@ -13,11 +14,13 @@ public class DataGenerator implements CommandLineRunner {
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
     private final EmployeeRepository employeeRepository;
+    private final CoursesRepository coursesRepository;
 
-    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
+    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, CoursesRepository coursesRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
         this.employeeRepository = employeeRepository;
+        this.coursesRepository = coursesRepository;
     }
 
     @Override
@@ -47,7 +50,11 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("----------------Employee End----------------");
 
 
+        System.out.println("----------------Courses Start----------------");
 
+        coursesRepository.findByCategory("Spring").forEach(System.out::println);
+
+        System.out.println("----------------Courses End----------------");
 
 
     }
