@@ -2,6 +2,7 @@ package com.cydeo.model;
 
 import com.cydeo.enums.Role;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import javax.persistence.*;
 public class AccountDetail extends BaseEntity{
 
     private String name;
+    @JsonIgnore
     private String address;
     private String country;
     private String city;

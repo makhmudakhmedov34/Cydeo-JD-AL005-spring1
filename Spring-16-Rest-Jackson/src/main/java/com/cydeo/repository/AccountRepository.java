@@ -28,7 +28,7 @@ public interface AccountRepository extends JpaRepository<AccountDetail, Long> {
     //Write a derived query to list all accounts where the beginning of the address contains the keyword
     List<AccountDetail> findByAddressContains(String pattern);
     //Write a derived query to sort the list of accounts with age
-    List<AccountDetail> findByAgeOrderByAgeAsc();
+    List<AccountDetail> findByAgeOrderByAgeAsc(int age);
 
     // ------------------- JPQL QUERIES ------------------- //
 
