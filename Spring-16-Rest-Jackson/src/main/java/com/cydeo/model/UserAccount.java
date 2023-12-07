@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "user_account")
 @Data
 @NoArgsConstructor
-@JsonIgnoreProperties(value = "{hibernateLazyInitializer}", ignoreUnknown = true)
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true)
 public class UserAccount extends BaseEntity{
     @JsonIgnore
     private String email;

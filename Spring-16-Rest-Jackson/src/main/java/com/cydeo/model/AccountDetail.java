@@ -13,7 +13,8 @@ import javax.persistence.*;
 @Table(name = "account_details")
 @Data
 @NoArgsConstructor
-@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true)
+//@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true)
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true)
 public class AccountDetail extends BaseEntity{
 
     private String name;
