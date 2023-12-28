@@ -3,7 +3,7 @@ package com.cydeo.service.impl;
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.entity.Course;
 
-import com.cydeo.reposirory.CourseRepository;
+import com.cydeo.repository.CourseRepository;
 import com.cydeo.service.CourseService;
 import com.cydeo.util.MapperUtil;
 import org.springframework.stereotype.Service;
