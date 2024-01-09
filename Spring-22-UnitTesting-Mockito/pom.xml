@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cydeo</groupId>
-	<artifactId>Sprint-22-UnitTesting-Mockito</artifactId>
+	<artifactId>Spring-22-UnitTesting-Mockito</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Sprint-22-UnitTesting-Mockito</name>
 	<description>Sprint-22-UnitTesting-Mockito</description>
